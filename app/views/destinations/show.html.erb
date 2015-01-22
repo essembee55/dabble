@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @destination.name %>
+</p>
+
+<p>
+  <strong>Destination type:</strong>
+  <%= @destination.destination_type %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @destination.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @destination.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @destination.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @destination.zip %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @destination.price %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @destination.hours %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @destination.phone %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @destination.website %>
+</p>
+
+<p>
+  <strong>Facebook:</strong>
+  <%= @destination.facebook %>
+</p>
+
+<p>
+  <strong>Heading:</strong>
+  <%= @destination.heading %>
+</p>
+
+<p>
+  <strong>Subheading:</strong>
+  <%= @destination.subheading %>
+</p>
+
+<p>
+  <strong>Gpscoords:</strong>
+  <%= @destination.gpscoords %>
+</p>
+
+<%= link_to 'Edit', edit_destination_path(@destination) %> |
+<%= link_to 'Back', destinations_path %>

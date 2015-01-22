@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Destinations</h1>
+
+
+<div class="ui inline dropdown">
+  <input type="hidden" name="gender">
+  <div class="text">Shiba Inu</div>
+  <i class="dropdown icon"></i>
+  <div class="menu">
+    <div class="item">
+      <i class="dropdown icon"></i>
+      <span class="text">Dogs</span>
+      <div class="menu">
+        <div class="item">Shiba Inu</div>
+        <div class="item">Poodle</div>
+        <div class="item">Labrador</div>
+      </div>
+    </div>
+    <div class="item">
+      <i class="dropdown icon"></i>
+      <span class="text">Cats</span>
+      <div class="menu">
+        <div class="item">Aegean</div>
+        <div class="item">Balinese</div>
+        <div class="item">Persian</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Destination type</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Price</th>
+      <th>Hours</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th>Facebook</th>
+      <th>Heading</th>
+      <th>Subheading</th>
+      <th>Gpscoords</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @destinations.each do |destination| %>
+      <tr>
+        <td><%= destination.name %></td>
+        <td><%= destination.destination_type %></td>
+        <td><%= destination.address %></td>
+        <td><%= destination.city %></td>
+        <td><%= destination.state %></td>
+        <td><%= destination.zip %></td>
+        <td><%= destination.price %></td>
+        <td><%= destination.hours %></td>
+        <td><%= destination.phone %></td>
+        <td><%= link_to 'WWW', destination.website %></td>
+        <td><%= link_to 'FB', destination.facebook %></td>
+        <td><%= destination.heading %></td>
+        <td><%= destination.subheading %></td>
+        <td><%= destination.gpscoords %></td>
+        <td><%= link_to 'Show', destination %></td>
+        <td><%= link_to 'Edit', edit_destination_path(destination) %></td>
+        <td><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Destination', new_destination_path %>
